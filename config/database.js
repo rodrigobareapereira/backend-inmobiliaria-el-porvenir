@@ -52,7 +52,7 @@ module.exports = ({ env }) => {
         connectionString: env('DATABASE_URL'),
         host: env('DATABASE_HOST', 'localhost'),
         port: env.int('DATABASE_PORT', 5432),
-        database: env('DATABASE_NAME', 'inmobiliaria-elporvenir'),
+        database: env('DATABASE_NAME', 'db-inmobiliaria'),
         user: env('DATABASE_USERNAME', ''),
         password: env('DATABASE_PASSWORD', ''),
         ssl: env.bool('DATABASE_SSL', false) && {
