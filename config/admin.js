@@ -8,17 +8,17 @@ module.exports = ({ env }) => ({
     promoteEE: env.bool('FLAG_PROMOTE_EE', true),
   },
 
-  // 👇 IMPORTANTES
-  // La URL pública exacta de tu admin (sin / al final)
+  // URL pública del admin (sin slash final)
   url: env('APP_URL', 'https://backend-inmobiliaria-el-porvenir.onrender.com'),
 
-  // Strapi validará window.location.origin contra esta lista
+  // Orígenes permitidos para el panel
   allowedOrigins: [
     'https://backend-inmobiliaria-el-porvenir.onrender.com',
     'http://localhost:1337',
   ],
 
-  // Opcional (asegura que sirva el panel)
+  // Asegura que sirva el panel en producción
   serveAdminPanel: env.bool('SERVE_ADMIN', true),
 });
+
 
