@@ -19,8 +19,12 @@ module.exports = ({ env }) => [
   {
     name: 'strapi::cors',
     config: {
-     origin: ['https://frontend-inmobiliaria.vercel.app' , 'https://backend-inmobiliaria-el-porvenir.onrender.com/'], // Desactivado temporalmente: permite solicitudes solo desde el frontend en producción (Vercel) // <- importante
-       //origin: ['http://localhost:1337', 'http://localhost:3000'],
+      origin: [
+        'https://frontend-inmobiliaria.vercel.app',
+        'https://backend-inmobiliaria-el-porvenir.onrender.com',
+        'http://localhost:1337',
+        'http://localhost:3000'
+      ],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization'],
       credentials: true,
@@ -34,13 +38,3 @@ module.exports = ({ env }) => [
   'strapi::favicon',
   'strapi::public',
 ];
-
-module.exports = {
-  enabled: true,
-  origin: [
-    'https://backend-inmobiliaria-el-porvenir.onrender.com',
-    'http://localhost:1337',
-    'http://0.0.0.0:1337'
-  ]
-};
-
