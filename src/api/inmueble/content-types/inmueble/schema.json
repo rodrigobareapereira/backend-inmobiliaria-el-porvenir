@@ -1,0 +1,106 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inmuebles",
+  "info": {
+    "singularName": "inmueble",
+    "pluralName": "inmuebles",
+    "displayName": "Inmueble",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "inmuebleName": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "inmuebleName"
+    },
+    "Direccion": {
+      "type": "text"
+    },
+    "imagenes": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "terreno": {
+      "type": "float"
+    },
+    "construccion": {
+      "type": "float"
+    },
+    "dormitorios": {
+      "type": "integer"
+    },
+    "banos": {
+      "type": "integer"
+    },
+    "estacionamientos": {
+      "type": "integer"
+    },
+    "descripcion": {
+      "type": "blocks"
+    },
+    "tipo": {
+      "type": "enumeration",
+      "enum": [
+        "Lote",
+        "Casa",
+        "Departamento",
+        "Terreno",
+        "Tienda Comercial"
+      ]
+    },
+    "precio": {
+      "type": "decimal",
+      "precision": 14,
+      "scale": 2
+    },
+    "ubicacion": {
+      "type": "customField",
+      "customField": "plugin::map-field.map"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "categoria": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::categoria.categoria"
+    },
+    "agente": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::agente.agente"
+    },
+    "ciudad": {
+      "type": "enumeration",
+      "enum": [
+        "Tarija",
+        "Santa Cruz",
+        "La Paz",
+        "Cochabamba",
+        "Bermejo",
+        "Yacuiba"
+      ]
+    },
+    "frente": {
+      "type": "float"
+    }
+  }
+}
