@@ -35,3 +35,12 @@ module.exports = ({ env }) => [
   'strapi::public',
 ];
 
+module.exports = {
+  enabled: true,
+  origin: [
+    'https://backend-inmobiliaria-el-porvenir.onrender.com',
+    'http://localhost:1337',
+    'http://0.0.0.0:1337'
+  ]
+};
+
