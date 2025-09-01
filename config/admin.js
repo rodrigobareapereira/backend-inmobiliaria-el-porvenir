@@ -17,7 +17,6 @@ module.exports = ({ env }) => ({
     'http://localhost:1337',
   ],
 
-  // 👇 fuerza la ruta del panel
-  path: '/admin',
+  // ⚠️ No definas "path" aquí en v4.
   serveAdminPanel: env.bool('SERVE_ADMIN', true),
 });
