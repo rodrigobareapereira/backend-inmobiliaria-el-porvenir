@@ -8,13 +8,16 @@ module.exports = ({ env }) => ({
     promoteEE: env.bool('FLAG_PROMOTE_EE', true),
   },
 
+  // URL pública (sin slash final)
   url: env('APP_URL', 'https://backend-inmobiliaria-el-porvenir.onrender.com'),
+
+  // Orígenes válidos
   allowedOrigins: [
     'https://backend-inmobiliaria-el-porvenir.onrender.com',
     'http://localhost:1337',
   ],
 
-  // 👇 Fuerza la ruta del panel
+  // 👇 fuerza la ruta del panel
   path: '/admin',
   serveAdminPanel: env.bool('SERVE_ADMIN', true),
 });
